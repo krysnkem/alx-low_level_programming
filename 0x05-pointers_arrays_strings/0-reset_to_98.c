@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * reset_to_98 - check the code
  *
- * Return: Always 0.
+ * @n: to hold the address of the variable.
  */
 void reset_to_98(int *n)
 {
