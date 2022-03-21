@@ -3,8 +3,8 @@
 
 int main(void)
 {
-	int m = 10;
-	reset_to_98(&m);
+	int n = 402;
+	reset_to_98(&n);
 	return (0);
 }
 void reset_to_98(int *n)
