@@ -12,15 +12,14 @@ void print_rev(char *s)
 	char tempVal;
 	char tmp;
 	int count;
-	
+
 	tmp = *s;
 	count = 0;
 	while (tmp != '\0')
 	{
 		++count;
 		tmp = *(s + count);
-        }
-
+	}
 	alength = count;
 	for (countIndex = alength - 1; countIndex > -1; countIndex--)
 	{
