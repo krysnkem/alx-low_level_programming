@@ -9,18 +9,16 @@
 void print_rev(char *s)
 {
 	int alength;
-	char array;
 	int count;
 	char tempVal;
 
-	array = *s;
-	alength = _strlen(array);
+	alength = _strlen(s);
 	for (count = alength - 1; count > -1; count--)
 	{
-		tempVal = *(array + count);
+		tempVal = *(s + count);
 		_putchar(tempVal);
 	}
-	_putchar('\n')
+	_putchar('\n');
 }
 int _strlen(char *s)
 {
