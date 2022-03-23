@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_rev - reverses the string.
+ * rev_string - reverses the string.
  * @s: holds the array.
  * Return: length of string
  */
@@ -22,7 +22,6 @@ void rev_string(char *s)
 		tmp = *(s + count);
 	}
 	alength = count;
-	
 	for (countIndex = alength - 1; countIndex > -1; countIndex--)
 	{
 		tempVal = *(s + countIndex);
@@ -30,7 +29,7 @@ void rev_string(char *s)
 	}
 	for (count = 0; countIndex > 0; count++)
 	{
-		*(s + count) = tempString[count]; 
+		*(s + count) = tempString[count];
 	}
 	_putchar('\n');
 }
