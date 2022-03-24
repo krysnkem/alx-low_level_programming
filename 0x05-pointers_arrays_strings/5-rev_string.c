@@ -12,24 +12,29 @@ void rev_string(char *s)
 	char tempVal;
 	char tmp;
 	int count;
-	char tempString[] = "";
+	char tempString[50];
+	int i;
 
 	tmp = *s;
 	count = 0;
 	while (tmp != '\0')
 	{
-		++count;
 		tmp = *(s + count);
+		++count;
 	}
 	alength = count;
-	for (countIndex = alength - 1; countIndex > -1; countIndex--)
+	for (countIndex = alength - 1; countIndex >= 0; countIndex--)
 	{
 		tempVal = *(s + countIndex);
-		tempString[alength - countIndex + 1] = tempVal;
+		if(tempVal != '\0')
+		{
+			tempString[alength - (countIndex + 1)] = tempVal;
+		}
 	}
-	for (count = 0; countIndex > 0; count++)
+	for (i = 0; i < alength; i++)
 	{
-		*(s + count) = tempString[count];
+		*(s + i) = tempString[i];
 	}
+	
 	_putchar('\n');
 }
