@@ -35,7 +35,6 @@ void rev_string(char *s)
 		if(tempString[i] != '\0')
 			*(s + (i - 1)) = tempString[i];
 	}
-	*(s + (alength-1)) = '\0';
 	_putchar('\n');
 	
 }
