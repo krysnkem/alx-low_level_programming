@@ -23,7 +23,6 @@ void rev_string(char *s)
 		++count;
 	}
 	alength = count;
-	printf("length: %d\n", alength);
 	for (countIndex = alength - 1; countIndex >= 0; countIndex--)
 	{
 		tempVal = *(s + countIndex);
