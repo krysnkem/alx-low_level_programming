@@ -25,7 +25,6 @@ void rev_string(char *s)
 	for (countIndex = alength - 1; countIndex >= 0; countIndex--)
 	{
 		tempVal = *(s + countIndex);
-		B
 		if (tempVal != '\0')
 		{
 			tempString[alength - (countIndex + 1)] = tempVal;
