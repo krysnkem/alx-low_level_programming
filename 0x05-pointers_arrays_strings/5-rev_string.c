@@ -1,10 +1,10 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * rev_string - reverses the string.
  * @s: holds the array.
  * Return: length of string
  */
-
 void rev_string(char *s)
 {
 	int alength;
@@ -12,7 +12,7 @@ void rev_string(char *s)
 	char tempVal;
 	char tmp;
 	int count;
-	char tempString[50];
+	char tempString[477];
 	int i;
 
 	tmp = *s;
@@ -23,18 +23,18 @@ void rev_string(char *s)
 		++count;
 	}
 	alength = count;
+	printf("length: %d\n", alength);
 	for (countIndex = alength - 1; countIndex >= 0; countIndex--)
 	{
 		tempVal = *(s + countIndex);
-		if(tempVal != '\0')
+		if (tempVal != '\0')
 		{
 			tempString[alength - (countIndex + 1)] = tempVal;
 		}
 	}
-	for (i = 0; i < alength; i++)
+	for (i = 1; i < alength; i++)
 	{
-		*(s + i) = tempString[i];
+		*(s + (i - 1)) = tempString[i];
 	}
-	
 	_putchar('\n');
 }
