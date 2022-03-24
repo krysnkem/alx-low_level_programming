@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * rev_string - reverses the string.
  * @s: holds the array.
@@ -19,13 +18,15 @@ void rev_string(char *s)
 	count = 0;
 	while (tmp != '\0')
 	{
+		B
 		tmp = *(s + count);
 		++count;
 	}
 	alength = count;
 	for (countIndex = alength - 1; countIndex >= 0; countIndex--)
-	{
+	{i
 		tempVal = *(s + countIndex);
+		B
 		if (tempVal != '\0')
 		{
 			tempString[alength - (countIndex + 1)] = tempVal;
