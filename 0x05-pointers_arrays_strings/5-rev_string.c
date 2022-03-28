@@ -27,14 +27,8 @@ void rev_string(char *s)
 		tempVal = *(s + countIndex);
 		if (tempVal != '\0')
 		{
-			tempString[alength - (countIndex + 1)] = tempVal;
+			*(s +(alength - (countIndex + 1)) ) = tempVal;
 		}
 	}
-	for (i = 1; i < alength; i++)
-	{
-		if(tempString[i] != '\0')
-			*(s + (i - 1)) = tempString[i];
-	}
-	_putchar('\n');
-	
+	_putchar('\n');	
 }
