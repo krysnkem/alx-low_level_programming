@@ -11,8 +11,6 @@ void rev_string(char *s)
 	char tempVal;
 	char tmp;
 	int count;
-	char tempString[477];
-	int i;
 
 	tmp = *s;
 	count = 0;
