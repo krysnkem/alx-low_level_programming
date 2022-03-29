@@ -31,7 +31,7 @@ void rev_string(char *s)
 		}
 	}
 	i = 0;
-	while (tempString[i] != '\0')
+	while (tempString[i + 1] != '\0')
 	{
 		*(s + i) = tempString[i + 1];
 		++i;
