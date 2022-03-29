@@ -36,5 +36,4 @@ void rev_string(char *s)
 		*(s + i) = tempString[i + 1];
 		++i;
 	}
-	_putchar('\n');
 }
