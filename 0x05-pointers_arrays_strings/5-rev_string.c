@@ -3,7 +3,7 @@
  * rev_string - reverses the string.
  * @s: holds the array.
  * Return: length of string
- */
+*/
 void rev_string(char *s)
 {
 	int alength;
@@ -11,6 +11,8 @@ void rev_string(char *s)
 	char tempVal;
 	char tmp;
 	int count;
+	char tempString[500];
+	int i;
 
 	tmp = *s;
 	count = 0;
@@ -25,8 +27,14 @@ void rev_string(char *s)
 		tempVal = *(s + countIndex);
 		if (tempVal != '\0')
 		{
-			*(s +(alength - (countIndex + 1)) ) = tempVal;
+			tempString[alength - (countIndex + 1)] = tempVal;
 		}
 	}
-	_putchar('\n');	
+	i = 0;
+	while (tempString[i] != '\0')
+	{
+		*(s + i) = tempString[i + 1];
+		++i;
+	}
+	_putchar('\n');
 }
