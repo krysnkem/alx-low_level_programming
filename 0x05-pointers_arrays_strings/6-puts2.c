@@ -26,4 +26,5 @@ void puts2(char *s)
 		}
 		++i;
 	}
+	_putchar('\n');
 }
