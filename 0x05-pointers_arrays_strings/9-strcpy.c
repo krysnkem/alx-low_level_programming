@@ -4,6 +4,7 @@
  * _strcpy - function that prints a particular amount of array
  * @dest: parameter that holds the destination location
  * @src: holds the source string
+ * Return: returns the string in the new destination
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -24,5 +25,5 @@ char *_strcpy(char *dest, char *src)
 		*(dest + i) = *(src + i);
 		++i;
 	}
-	return dest;
+	return (dest);
 }
