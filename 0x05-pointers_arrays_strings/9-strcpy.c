@@ -19,7 +19,7 @@ char *_strcpy(char *dest, char *src)
 		++count;
 	}
 	i = 0;
-	while (i < count)
+	while (i < count + 1)
 	{
 		*(dest + i) = *(src + i);
 		++i;
