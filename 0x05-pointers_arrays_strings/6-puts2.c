@@ -14,11 +14,11 @@ void puts2(char *s)
 	count = 0;
 	while (tmp != '\0')
 	{
-		tmp = *(s + count);
+		tmp = *(s + count + 1);
 		++count;
 	}
 	i = 0;
-	while (i < count - 1)
+	while (i < count)
 	{
 		if (i % 2 == 0)
 		{
