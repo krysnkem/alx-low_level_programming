@@ -23,6 +23,6 @@ void print_square(int size)
 		}
 		++height;
 	}
-	if (n <= 0)
+	if (size <= 0)
 		_putchar ('\n');
 }
