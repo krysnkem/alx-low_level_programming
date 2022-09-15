@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_most_numbers - prints all numbers except
+ * print_numbers - prints all numbers except
  *
  * Description: prints all natural numbers expept
  */
