@@ -29,6 +29,7 @@ void print_diagonal(int n)
 		if (line + 1 == n)
 			_putchar('\n');
 	}
+	if (n < 0)
 	_putchar('\n');
 
 }
