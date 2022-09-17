@@ -9,11 +9,9 @@
  */
 void print_number(int n)
 {
-	int digitCount;
-	int multiplier;
-	int tempNum;
-	int digit;
-	int i;
+	int digitCount, multiplier, tempNum;
+	int digit, i, c;
+
 
 	if (n == 0)
 	{
@@ -40,12 +38,14 @@ void print_number(int n)
 	/*new lets get and print each digit*/
 	if (n < 0)
 		_putchar('-');
-	while (tempNum != 0)
+	c = 0;
+	while (c < digitCount)
 	{
 		digit = tempNum / multiplier;
-		tempNum = tempNum - (digit * multiplier);
+		tempNum = tempNum % multiplier;
 		multiplier = multiplier / 10;
 		_putchar(digit + '0');
+		++c;
 	}
 }
 

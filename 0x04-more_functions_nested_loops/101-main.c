@@ -16,5 +16,12 @@ int main(void)
 	_putchar('\n');
 	print_number(-98);
 	_putchar('\n');
+	print_number(-9);
+	_putchar('\n');
+	print_number(9);
+	_putchar('\n');
+	print_number(-10);
+	_putchar('\n');
+
 	return (0);
 }
