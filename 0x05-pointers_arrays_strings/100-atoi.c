@@ -10,7 +10,8 @@
 
 int _atoi(char *s)
 {
-	int len, n, num, minus;
+	int len, n, minus;
+	unsigned int num;
 
 	n = 0;
 	num = 0;
@@ -42,7 +43,6 @@ int _atoi(char *s)
 		num = (num * 10) + (s[n] - '0');
 		++n;
 	}
-
 	if (minus % 2 != 0)
 		return (num * -1);
 	return (num);
