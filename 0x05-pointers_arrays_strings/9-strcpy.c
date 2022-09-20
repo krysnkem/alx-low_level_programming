@@ -21,11 +21,7 @@ char *_strcpy(char *dest, char *src)
 		*(dest + i) = *(src + i);
 		++i;
 	}
-	while (i < len)
-	{
-		*(dest + i) = '\0';
-		++i;
-	}
+	*(dest + i) = '\0';
 	return (dest);
 }
 
