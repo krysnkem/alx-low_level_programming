@@ -27,6 +27,9 @@ char *cap_string(char *s)
 			|| s[i - 1] == '\t'
 			|| s[i - 1] == '\n')
 				s[i] -= 32;
+
+			if (i == 0)
+				s[i] -= 32;
 		}
 		++i;
 	}
