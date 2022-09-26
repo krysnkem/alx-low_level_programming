@@ -4,6 +4,7 @@
  * @s: target string
  * @c: character to be found
  *
+ * Return: address of c found and NUll if no address found
  */
 char *_strchr(char *s, char c)
 {
