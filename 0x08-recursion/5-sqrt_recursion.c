@@ -8,18 +8,11 @@
  */
 int count_sub_odd_num(int n, int x)
 {
-	int i;
-
 	if (n == 0)
 		return (0);
 	if (n == 1)
 		return (-1 * (x + 1));
-	i = 0;
-	while (i < x)
-	{
-		n = n - 2;
-		++i;
-	}
+	n = n - (2 * x);
 	return (1 + count_sub_odd_num(n - 1, x + 1));
 }
 /**
