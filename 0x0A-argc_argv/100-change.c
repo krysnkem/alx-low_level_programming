@@ -6,6 +6,7 @@
  * @argc: number of arguments
  * @argv: array of arguments
  *
+ * Return: 1 for error and 0 for success
  */
 int main(int argc, char *argv[])
 {
@@ -21,7 +22,7 @@ int main(int argc, char *argv[])
 	}
 	money = atoi(argv[1]);
 
-	while (money != 0)
+	while (!(money <= 0))
 	{
 		if (money >= coin[n])
 		{
