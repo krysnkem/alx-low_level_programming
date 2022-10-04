@@ -1,53 +1,45 @@
 #include <stdlib.h>
-#include <stddef.h>
 #include <string.h>
+
 /**
- * str_concat - joines two strings and copy to a new memory location
+ * str_concat - concatenates two strings
  * @s1: first string
  * @s2: second string
  *
- * Return: new location with concatenation of s1 and s2
+ * Return: pointer to the new location of concatenation
+ * of the two strings or pointer in the event of failure
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *new_dest;
-	unsigned long int i, n;
+	 char *dest, *s1_cp, *s2_cp;
+	 unsigned long int i, n;
 
-	new_dest = malloc((sizeof(*s1) * strlen(s1))
-			+ (sizeof(*s2) * strlen(s2)));
-	if (new_dest == NULL)
+	if (s1 == NULL)
+		s1_cp = "";
+	else
+		s1_cp = s1;
+	if (s2 == NULL)
+		s2_cp = "";
+	else
+		s2_cp = s2;
+
+	dest = malloc(sizeof(*s1_cp) * strlen(s1_cp)
+			 + sizeof(*s2_cp) * strlen(s2_cp) + 1);
+	if (dest == NULL)
 		return (NULL);
 	i = 0;
 	n = 0;
-	if (s1 != NULL && s2 == NULL)
+	while (i < strlen(s1_cp))
 	{
-		while (i < strlen(s1))
-		{
-			*(new_dest + i) = *(s1 + i);
-			i++;
-		}
+		*(dest + i) = *(s1_cp + i);
+		++i;
 	}
-	if (s1 == NULL && s2 != NULL)
+	while (n < strlen(s2_cp))
 	{
-		while (i < strlen(s2))
-		{
-			*(new_dest + i) = *(s2 + i);
-			i++;
-		}
+		*(dest + i + n) = *(s2_cp + n);
+		++n;
 	}
-	if (s1 != NULL && s2 != NULL)
-	{
-		while (i < strlen(s1))
-		{
-			*(new_dest + i) = *(s1 + i);
-			i++;
-		}
-		while (n < strlen(s2))
-		{
-			*(new_dest + i + n) = *(s2 + n);
-			n++;
-		}
-	}
-	*(new_dest + (i + n)) = '\0';
-	return (new_dest);
+	*(dest + i + n) = '\0';
+	return (dest);
+
 }
