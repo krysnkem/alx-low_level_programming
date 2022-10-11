@@ -19,7 +19,7 @@ void print_dog(struct dog *d)
 		name = "(nil)";
 	else
 		name = d->name;
-	if (*(d->owner) == 1)
+	if (d->owner == NULL)
 		owner = "(nil)";
 	else
 		owner = d->owner;
