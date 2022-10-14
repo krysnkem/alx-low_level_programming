@@ -12,8 +12,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list ap;
 	const char *sep;
 
-	if (n == 0)
-		return;
 	if (separator == NULL)
 		sep = "";
 	else
