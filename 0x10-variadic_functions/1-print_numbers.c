@@ -10,7 +10,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list ap;
-	char *sep;
+	const char *sep;
 
 	if (n == 0)
 		return;
