@@ -14,8 +14,10 @@ int clear_bit(unsigned long int *n, unsigned int index)
 {
 	int bit_result = get_bit(*n, index);
 
-	if (bit_result == -1 || bit_result == 0)
+	if (bit_result == -1)
 		return (-1);
+	if (bit_result == 0)
+		return (1);
 	*n = *n - _pow_recursion(2, index);
 	return (1);
 
