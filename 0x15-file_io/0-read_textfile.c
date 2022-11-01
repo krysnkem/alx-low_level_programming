@@ -33,7 +33,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buff);
 		return (0);
 	}
-	buff[read_result] = '\0';
 	write_result = write(1, buff, read_result);
 	if (write_result < 0)
 	{
@@ -43,5 +42,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	close(fd);
 	free(buff);
-	return (read_result);
+	return (write_result);
 }
