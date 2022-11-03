@@ -15,9 +15,9 @@ void close_files(int file_from_fd, int file_to_fd)
 	int close_file_to = close(file_to_fd);
 
 	if (close_file_from == -1)
-		dprintf(2, "Error: Can't close fd %d\n", file_from_fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from_fd);
 	if (close_file_to == -1)
-		dprintf(2, "Error: Can't close fd %d\n", file_to_fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to_fd);
 	if (close_file_from == -1 || close_file_to == -1)
 		exit(100);
 }
@@ -38,7 +38,7 @@ int open_file_from(const char *path, int oflags, char *file_from)
 
 	if (file_from_fd == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 	return (file_from_fd);
@@ -64,7 +64,7 @@ int open_file_to(const char *path, int oflags, mode_t mode,
 
 	if (file_to_fd == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		close(file_from_fd);
 		exit(99);
 	}
@@ -87,7 +87,7 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -101,14 +101,14 @@ int main(int ac, char **av)
 		read_op = read(file_from_fd, buffer, 1024);
 		if (read_op == -1)
 		{
-			dprintf(2, "Error: Can't read from file %s\n",
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
 					file_from);
 			exit(98);
 		}
 		write_op = write(file_to_fd, buffer, read_op);
 		if (write_op == -1)
 		{
-			dprintf(2, "Error: Can't write to %s\n", file_to);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			exit(99);
 		}
 	} while (read_op != 0);
