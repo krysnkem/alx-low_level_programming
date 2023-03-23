@@ -14,12 +14,12 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	dlistint_t *h = *head;
 	size_t count = 0;
 
-	if(head == NULL)
+	if (head == NULL)
 	{
 		return (NULL);
 	}
 
-	while(h)
+	whilei (h)
 	{
 		++count;
 		prev = h;
@@ -46,5 +46,5 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		new->prev = NULL;
 	}
 
-	return(new);
+	return (new);
 }
